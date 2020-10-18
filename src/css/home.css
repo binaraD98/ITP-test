@@ -56,9 +56,17 @@
     
     margin: 15px;
 }
+
 .form-control{
     border : 2px solid;
     border-color: #ff000033;
+}
+.date-control{
+    border : 2px solid;
+    border-color: #ff000033;
+    width : 400px;
+    height : 40px;
+    border-radius: 5px;
 }
 .btn-bill{
     align-self: center;

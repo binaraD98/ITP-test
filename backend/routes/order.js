@@ -50,16 +50,16 @@ router.route('/:id').delete((req,res) => {
 router.route('/update/:id').post((req,res) => {
     Order.findById(req.params.id)
         .then(order => {
-            const orderNumber = Number(req.body.orderNumber);
-            const customerName = req.body.customerName;
-            const address = req.body.address;
-            const contactNo = req.body.contactNo;
-            const design = req.body.design;
-            const size = req.body.size;
-            const quantity = Number(req.body.quantity);
-            const printingMaterials = req.body.printingMaterials;
-            const orderType = req.body.orderType;
-            const orderStatus = req.body.orderStatus;
+            order.orderNumber = Number(req.body.orderNumber);
+            order.customerName = req.body.customerName;
+            order.address = req.body.address;
+            order.$isDefaultcontactNo = req.body.contactNo;
+            order.design = req.body.design;
+            order.size = req.body.size;
+            order.quantity = Number(req.body.quantity);
+            order.printingMaterials = req.body.printingMaterials;
+            order.orderType = req.body.orderType;
+            order.orderStatus = req.body.orderStatus;
 
             order.save()
                 .then(() => res.json('Order updated'))

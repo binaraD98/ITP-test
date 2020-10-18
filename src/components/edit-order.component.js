@@ -91,7 +91,7 @@ export default class EditOrder extends Component {
 
     onChangeSize(e){
         this.setState({
-            Size : e.target.value
+            size : e.target.value
         });
     }
 
@@ -132,7 +132,7 @@ export default class EditOrder extends Component {
             quantity : this.state.quantity,
             printingMaterials : this.state.printingMaterials,
             orderType : this.state.orderType,
-            orderSatatus : this.state.orderStatus,
+            orderStatus : this.state.orderStatus,
         }
 
         console.log(order);

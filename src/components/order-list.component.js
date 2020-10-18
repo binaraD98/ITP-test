@@ -41,7 +41,7 @@ export default class OrderList extends Component {
         }
 
         deleteOrder(id){
-            axios.delete('http://localhost:5000/order/delete' +id)
+            axios.delete('http://localhost:5000/order/' +id)
             .then(res => console.log(res.data));
             this.setState({
                 order : this.state.order.filter(el => el._id !== id)

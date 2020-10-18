@@ -138,7 +138,7 @@ export default class EditLeave extends Component {
         <div className="form-group">
           <label>End Date: </label>
           <div>
-            <DatePicker
+            <DatePicker className = "date-control"
               selected={this.state.endDate}
               onChange={this.onChangeEndDate}
             />
